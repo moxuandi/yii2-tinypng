@@ -3,7 +3,7 @@
     "description": "yii2-tinypng-Description",
     "homepage": "https://github.com/moxuandi/yii2-tinypng",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
+    "keywords": ["yii2","extension", "tinypng"],
     "license": "MIT",
     "authors": [
         {
