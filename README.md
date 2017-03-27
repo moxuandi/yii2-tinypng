@@ -16,7 +16,7 @@ composer require --prefer-dist moxuandi/yii2-tinypng "dev-master"
 or add
 
 ```
-"moxuandi/yii2-tinypng": "*"
+"moxuandi/yii2-tinypng": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
