@@ -24,8 +24,7 @@ to the require section of your `composer.json` file.
 
 Usage
 -----
-
-Once the extension is installed, simply use it in your code by  :
-
-```php
-<?= \moxuandi\tinypng\AutoloadExample::widget(); ?>```
+待完善：
+1. 执行时间过长（尤其是多图处理时），考虑后台执行
+2. 返回信息统一化，数组（包含每一张图片的错误信息）
+3. 使用说明
