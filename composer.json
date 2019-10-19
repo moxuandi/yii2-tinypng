@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "~2.0.24",
+        "tinify/tinify": "~1.5.2"
     },
     "autoload": {
         "psr-4": {
