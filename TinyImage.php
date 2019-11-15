@@ -72,7 +72,7 @@ class TinyImage
         foreach($files as $file){
             $input = FileHelper::normalizePath($file);
             $output = FileHelper::normalizePath(str_replace($inputDir, $outputDir, $file));
-            if(self::compressImage($input, $output, $resize) === false){
+            if($this->compressImage($input, $output, $resize) === false){
                 $error += 1;
             }else{
                 $success += 1;
@@ -95,7 +95,7 @@ class TinyImage
     {
         $success = $error = 0;
         foreach($images as $input => $output){
-            if(self::compressImage($input, $output, $resize) === false){
+            if($this->compressImage($input, $output, $resize) === false){
                 $error += 1;
             }else{
                 $success += 1;
@@ -125,7 +125,7 @@ class TinyImage
      */
     public function compressImage($input, $output, $resize = false, $type = 'file')
     {
-        $source = self::getSource($input, $type);
+        $source = $this->getSource($input, $type);
         if($resize){
             $source = $source->resize($resize);
         }
@@ -173,7 +173,7 @@ class TinyImage
                 $this->num += 1;
                 if($this->num < count($this->apiKeys)){
                     Yii::$app->cache->set($this->_key, $this->num);
-                    return self::getSource($input, $type);
+                    return $this->getSource($input, $type);
                 }else{
                     throw new AccountException("All keys are limit has been exceeded, No key available.");
                 }
