@@ -45,11 +45,7 @@ class TinyImage
         if (!$this->apiKey) {
             throw new InvalidConfigException("The property 'apiKey' must be in set in " . get_class($this) . ".");
         }
-        //try {
-            Tinify::setKey($this->apiKey);
-        //} catch (Exception $exception) {
-        //    throw new UnauthorizedHttpException("The specified apiKey '{$this->apiKey}' could not be validated.");
-        //}
+        Tinify::setKey($this->apiKey);
     }
 
     /**
